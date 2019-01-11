@@ -1,0 +1,59 @@
+
+{block navigation}
+    <header>
+        <nav>
+            <a n:href="Player:default">HOME</a>
+            <!--|
+            <a href="/html/">HTML</a> |
+            <a href="/css/">CSS</a> |
+            <a href="/js/">JavaScript</a> |
+            <a href="/jquery/">jQuery</a>
+            -->
+        </nav>
+    </header>
+{/block}
+
+
+{block playlist}
+
+    <table>
+        <caption>
+            Comment for {$post->name} song
+        </caption>
+        <thead>
+        <tr>
+            <th scope="col">ID and EDIT</th>
+            <th scope="col">Jméno</th>
+            <th scope="col">Email and SEND</th>
+            <th scope="col">Komentář</th>
+            <th scope="col">Přidáno</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- n:makra -->
+        <tr n:foreach="$comments as $comment" class="post" style="height:50px;">
+            <td><a n:href="edit $comment->id">{$comment->id}</a></td>
+            <td>{$comment->name}</td>
+            <!--
+            n:makra -> n:tag-if   ==  předponu tag-, makro se aplikuje pouze na HTML tag
+            Toto nám umožňuje udělat ze jména komentátora odkaz pouze v případě, že poskytl svůj email.
+            -->
+            <td><a href="mailto:{$comment->email}" n:tag-if="$comment->email">{$comment->email}</a></td>
+            <td>{$comment->content}</td>
+            <td class="date">{$comment->created_at|date:'F j, Y'}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    {if $important}<strong>{/if} {$important} {if $important}</strong>{/if}
+
+    {include form}
+{/block}
+
+
+{block form}
+    <h2>Vložte nový příspěvek</h2>
+    {control commentForm}
+{/block}
+
+

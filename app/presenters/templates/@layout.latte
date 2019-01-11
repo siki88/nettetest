@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="{$basePath}/css/style.css">
+
+	<title>{ifset title}{include title|stripHtml} | {/ifset}Nette Web</title>
+</head>
+
+<body>
+	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+	<!--
+	Zápis include content vkládá do hlavní šablony blok s názvem content.
+	Ten budeme definovat v šablonách jednotlivých pohledů (View).
+	V našem případě soubor app/presenters/templates/Player/default.latte upravíme následovně:
+	-->
+	{ifset navigation}{include navigation}{/ifset}
+	{ifset login}{include login}{/ifset}
+	{ifset playlist}{include playlist}{/ifset}
+
+	{block scripts}
+	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+	{/block}
+</body>
+</html>

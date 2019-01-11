@@ -1,0 +1,29 @@
+
+
+{block navigation}
+    <header>
+        <nav>
+            <nav>
+                <ul class="navig">
+                    {if $user->loggedIn}
+                        <li><a n:href="Sign:out">Odhlásit</a></li>
+                    {else}
+                        <li><a n:href="Sign:in">Přihlásit</a></li>
+                    {/if}
+                    <li><a n:href="Player:default">HOME</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+{/block}
+
+{block playlist}
+
+    {include form}
+{/block}
+
+
+{block form}
+    <h2>Vložte nový song</h2>
+    {control uploadForm}
+{/block}

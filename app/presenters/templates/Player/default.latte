@@ -1,0 +1,44 @@
+
+
+{block navigation}
+    <header>
+        <nav>
+            <ul class="navig">
+                {if $user->loggedIn}
+                    <li><a n:href="Sign:out">Odhlásit</a></li>
+                {else}
+                    <li><a n:href="Sign:in">Přihlásit</a></li>
+                {/if}
+                <li><a n:href="Player:add">ADD SONG</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1> This is player -
+    {if $status}<strong>{/if}
+            {$status}
+            {if $status}</strong>{/if}
+    </h1>
+
+{/block}
+
+{block playlist}
+    <table>
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>size_song</th>
+            <th>create_at</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!-- n:makra -->
+            <tr n:foreach="$posts as $post" class="post" style="height:50px;">
+                <td><a n:href="SongInfo:show $post->id">{$post->name}</a></td>
+                <td>{$post->size_song}</td>
+                <td class="date">{$post->create_at|date:'F j, Y'}</td>
+            </tr>
+        </tbody>
+    </table>
+{/block}

@@ -1,0 +1,30 @@
+
+
+{block content}
+    <form method="POST" action="http://127.0.0.1:8000/home" accept-charset="UTF-8" class="formUpload" enctype="multipart/form-data"><input name="_token" type="hidden" value="VVPwP39k8b1pytYHr0IZKTzzj8l1vO4ZujwgejCQ">
+
+        <p>UPLOAD MP3 SECTION</p>
+
+        <div class="form-group">
+            <label for="Mp3">Mp3</label>
+            <input type="file" accept="audio/*,.mp3,.wav" max="8191" class="fileInput" name="song">
+        </div>
+
+        <div class="form-group">
+            <label for="Compress mp3?">Compress Mp3?</label>
+            <input name="compress" type="checkbox" value="Ano">
+        </div>    <div class="form-group">
+            <label for="Convert to mp3?">Convert To Mp3?</label>
+            <input name="format" type="checkbox" value="1">
+        </div>
+
+        <div class="form-group">
+            <label for="Select album for save">Select Album For Save</label>
+            <select name="album"><option value="L">Large</option><option value="S">Small</option><option value="Other">Other</option></select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Save new song!</button>
+        </div>
+    </form>
+{/block}

@@ -1,0 +1,361 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+
+.links{
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+
+
+
+/*
+Skeleton v1.2
+Copyright: Dave Gamache
+www.getskeleton.com
+Free to use under the MIT license.
+https://www.opensource.org/licenses/mit-license.php
+Modifications by Mark Hillard
+*/
+
+
+
+
+
+/* Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container { width:768px; }
+    .container .columns { margin-left:10px; margin-right:10px; }
+    .container .twelve.columns { width:556px; }
+    .container .offset-by-two { padding-left:96px; }
+}
+
+
+/* Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+    .container { width:300px; }
+    .container .columns { margin:0; }
+    .container .twelve.columns { width:300px; }
+    .container .offset-by-two { padding-left:0; }
+}
+
+
+/* Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container { width:420px; }
+    .container .columns { margin:0; }
+    .container .twelve.columns { width:420px; }
+}
+
+
+/* Clearing
+================================================== */
+
+/* Self Clearing Goodness */
+.container:after {
+    clear:both;
+    content:"\0020";
+    display:block;
+    height:0;
+    visibility:hidden;
+}
+
+/* CSS Reset
+================================================== */
+html,body,div,span,h1,h6,p,a,ul,li,audio {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+}
+
+body { line-height:1; }
+ul { list-style:none; }
+
+
+
+
+
+
+/* CSS Transitions */
+* {
+    -moz-transition:all 100ms ease;
+    -o-transition:all 100ms ease;
+    -webkit-transition:all 100ms ease;
+    transition:all 100ms ease;
+}
+
+/* Highlight Styles */
+::selection { background-color:#262223; color:#444; }
+::-moz-selection { background-color:#262223; color:#444; }
+
+/* Music Player (Default - Firefox) */
+audio { margin:0 14px; width:672px; }
+   #audiowrap {margin:0 auto; }
+#plwrap { margin:0 auto; }
+#tracks { min-height:66px; position:relative; text-align:center; text-decoration:none; top:16px; }
+#nowPlay { display:inline; }
+#npTitle { margin:0; padding:21px; text-align:right; }
+#npAction { padding:21px; }
+#plList { margin:0; }
+  #plList li {  cursor:pointer; margin:0; padding:21px 0; }
+#plList li:hover { background-color:#A9A9A9; }
+.plItem { position:relative; }
+.plTitle { left:40px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
+.plNum { padding-left:21px; width:25px; }
+.plLength { padding-left:21px; position:absolute; right:21px; top:0; }
+.plSel,.plSel:hover { background-color:#A9A9A9!important; cursor:default!important; }
+  a[id^="btn"] {color:#C8C7C8; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
+a[id^="btn"]:last-child { margin-left:-3px; }
+a[id^="btn"]:hover,a[id^=btn]:active { background-color:#A9A9A9; }
+a[id^="btn"]::-moz-focus-inner { border:0; padding:0; }
+
+/* Music Player (Chrome) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    audio { margin:0; width:100%!important; }
+    a[id^="btn"]:hover { background-color:#A9A9A9; }
+    #plList li:hover { background-color:#A9A9A9; }
+    .plSel,.plSel:hover { background-color:#A9A9A9!important; }
+}
+
+/* Music Player (IE 10) */
+html[data-useragent*="MSIE 10.0"] audio { margin:0; width:100%; }
+html[data-useragent*="MSIE 10.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] #tracks { min-height:62px; top:11px;}
+html[data-useragent*="MSIE 10.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] a[id^="btn"]:hover { background-color:#A9A9A9; }
+html[data-useragent*="MSIE 10.0"] #plList li { background-color:#000; }
+html[data-useragent*="MSIE 10.0"] #plList li:hover { background-color:#A9A9A9; }
+html[data-useragent*="MSIE 10.0"] .plSel { background-color:#080808!important; }
+html[data-useragent*="MSIE 10.0"] .plSel:hover { background-color:#A9A9A9!important; }
+
+/* Music Player (IE 11) */
+html[data-useragent*="rv:11.0"] audio { margin:0; width:100%; }
+html[data-useragent*="rv:11.0"] #audiowrap { background-color:#000; }
+html[data-useragent*="rv:11.0"] #tracks { min-height:62px; top:11px;}
+html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:#000; }
+html[data-useragent*="rv:11.0"] a[id^="btn"]:hover { background-color:#A9A9A9; }
+html[data-useragent*="rv:11.0"] #plList li { background-color:#000; }
+html[data-useragent*="rv:11.0"] #plList li:hover { background-color:#A9A9A9; }
+html[data-useragent*="rv:11.0"] .plSel { background-color:#080808!important; }
+html[data-useragent*="rv:11.0"] .plSel:hover { background-color:#A9A9A9!important; }
+
+
+/* Media Queries (Devices & Browsers)
+================================================== */
+
+/* Tablet Portrait Size to Standard 960 */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    audio { width:528px; }
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    audio { width:391px; }
+    #npAction { position:absolute; }
+    #npTitle { width:261px; }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px) {
+    audio { width:271px; }
+    #npAction { position:absolute; }
+    #npTitle { width:156px; }
+}
+
+/* Chrome Hacks */
+@media only screen and (max-width: 959px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio:0), only screen and (max-width: 767px) and (min-width: 480px) and (-webkit-min-device-pixel-ratio:0), only screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio:0) {
+    audio { width: 100%; }
+}
+
+
+
+
+
+/*
+CSS Document
+My style
+SIKI
+*/
+
+section{
+    width: 50%;
+    float: left;
+    height: 1000px;
+    box-shadow: 0px 0px 3px 0px  rgba(0,0,0,0.2);
+}
+
+table, table tr th, table tr td{
+    padding-left: 20px;
+}
+
+table tr {
+    box-shadow: 0px 0px 3px 0px  rgba(0,0,0,0.2);
+}
+
+table td, table th{
+    text-align: center;
+}
+
+article{
+    height: 50%;
+}
+
+footer{
+    position: relative;
+    clear:both;
+    height: 50px;
+}
+
+.formUpload{
+    box-shadow: 0px -2px 1px 0px  rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.formUpload p{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.clickable-row:hover{
+    background-color:#A9A9A9;
+}
+
+.pForTable{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fileInput{
+
+}
+
+
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top:150px;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .25em 0 .75em;
+}
+
+table tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th, table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+table td img { text-align: center; }
+@media screen and (max-width: 600px) {
+
+    table { border: 0; }
+
+    table caption { font-size: 1.3em; }
+
+    table thead { display: none; }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child { border-bottom: 0; }
+}
+
+
+
+

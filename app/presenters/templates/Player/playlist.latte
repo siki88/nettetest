@@ -1,0 +1,77 @@
+
+
+{block playlist}
+    <!--
+    <table class="table">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>album</th>
+            <th>size_song</th>
+            <th>long_song</th>
+            <th>format</th>
+            <th>compress</th>
+            <th>create_at</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>109</td>
+            <td>14. Daft Punk - Fall.mp3</td>
+            <td>L</td>
+            <td>3360646</td>
+            <td>3:30</td>
+            <td>mp3</td>
+            <td>Ne</td>
+            <td>2019-01-06 15:51:30.9</td>
+            <td><a href="http://127.0.0.1:8000/home?109">delete</a></td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td>06. Daft Punk - Arena.mp3</td
+            ><td>L</td>
+            <td>3784876</td>
+            <td>3:57</td>
+            <td>mp3</td>
+            <td>Ne</td>
+            <td>2019-01-06 16:22:43.4</td>
+            <td><a href="http://127.0.0.1:8000/home?110">delete</a></td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>03. Daft Punk - The Son of Flynn.mp3</td>
+            <td>L</td>
+            <td>3866157</td>
+            <td>4:2</td>
+            <td>mp3</td>
+            <td>Ne</td>
+            <td>2019-01-06 16:28:41.1</td>
+            <td><a href="http://127.0.0.1:8000/home?111">delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+-->
+    <table class="table">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>size_song</th>
+        <th>create_at</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $posts as $post}
+        <tr class="post">
+            <td>{$post->name}</td>
+            <td>{$post->size_song}</td>
+            <td class="date">{$post->create_at|date:'F j, Y'}</td>
+        </tr>
+    {/foreach}
+    </tbody>
+    </table>
+
+
+{/block}
